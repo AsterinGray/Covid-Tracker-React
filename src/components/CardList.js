@@ -8,6 +8,8 @@ const CardList = (props) => {
   const CardList = statistic.map((datum) => {
     if (datum.provinsi.toLowerCase().includes(keyword)) {
       return <Card key={datum.fid} data={datum} />;
+    } else if (keyword === '') {
+      return <Card key={datum.fid} data={datum} />;
     }
     return null;
   });

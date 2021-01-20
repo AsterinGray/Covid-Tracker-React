@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
-import SearchBar from './SearchBar';
-import CardList from './CardList';
+import Navbar from '../components/Navbar';
+import SearchBar from '../components/SearchBar';
+import CardList from '../components/CardList';
 
-class App extends Component {
+class ProvincePage extends Component {
   state = { statistic: [], keyword: null };
 
   onSearchSubmit = async (term) => {
@@ -19,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Navbar />
         <SearchBar onSubmit={this.onSearchSubmit} />
         <CardList data={this.state} />
       </div>
@@ -26,4 +28,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default ProvincePage;
