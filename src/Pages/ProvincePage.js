@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import axios from 'axios';
+import covid19 from '../api/covid19';
 
 import Navbar from '../components/Navbar';
 import SearchBar from '../components/SearchBar';
@@ -14,9 +14,7 @@ class ProvincePage extends Component {
   }
 
   loadData = async (term) => {
-    const response = await axios.get(
-      'https://indonesia-covid-19.mathdro.id/api/provinsi'
-    );
+    const response = await covid19.get('/provinsi');
     this.setState({
       statistic: response.data.data,
       keyword: term.toLowerCase(),

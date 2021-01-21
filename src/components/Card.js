@@ -7,9 +7,18 @@ const Card = ({ data }) => {
         <span>#{data.kodeProvi}</span>
         <span>{data.provinsi}</span>
       </div>
-      <p>Kasus Meninggal: {data.kasusMeni}</p>
-      <p>Kasus Positif: {data.kasusPosi}</p>
-      <p>Kasus Sembuh: {data.kasusSemb}</p>
+      <p className="card-text">
+        <span>Death</span>
+        <span>{data.kasusMeni}</span>
+      </p>
+      <p className="card-text">
+        <span>Positive</span>
+        <span>{data.kasusPosi}</span>
+      </p>
+      <p className="card-text">
+        <span>Recovered</span>
+        <span>{data.kasusSemb}</span>
+      </p>
     </div>
   );
 };

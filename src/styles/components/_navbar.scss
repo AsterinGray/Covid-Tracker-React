@@ -3,8 +3,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
-  padding: 1rem 10rem;
-  background-color: $primary-color;
+  padding: 1rem 0;
   .nav-menu {
     display: flex;
     align-items: center;
@@ -13,10 +12,11 @@
     }
     .nav-item {
       margin: 0 2rem;
-      color: $secondary-color;
+      font-weight: bold;
+      color: $primary-color;
     }
     .nav-item:hover {
-      color: $secondary-color-dark;
+      color: $primary-color-light;
     }
   }
   a {
@@ -27,7 +27,9 @@
     border-radius: 0.5rem;
     cursor: pointer;
     padding: 0.5rem;
-    background-color: $secondary-color;
+    background-color: $primary-color;
+    color: white;
+    text-decoration: none;
     i {
       margin: 0.5rem;
     }

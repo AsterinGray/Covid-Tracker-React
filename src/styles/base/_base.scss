@@ -2,10 +2,27 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   font-family: 'Segoe UI';
 }
 
 .container {
   padding: 0 10rem;
+}
+
+@media only screen and (max-width: 992px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body,
+  html {
+    font-size: 8px;
+  }
 }

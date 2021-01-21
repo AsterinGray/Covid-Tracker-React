@@ -1,0 +1,31 @@
+.search {
+  margin: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input {
+    height: 3rem;
+    width: 50vw;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  input:focus {
+    outline: none;
+  }
+  button {
+    height: 5rem;
+    padding: 1rem;
+    width: 5rem;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: $primary-color;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: $primary-color-light;
+  }
+}

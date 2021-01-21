@@ -2,10 +2,25 @@
   @include flex-cc();
   flex-direction: column;
   transition: all ease 1s;
+  text-align: center;
+
+  .home-content {
+    margin: 3rem 0;
+    p {
+      font-size: 3rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 5rem;
+    }
+  }
 
   .home-cards {
     display: flex;
     align-items: center;
-    flex-direction: column;
   }
 }
