@@ -5,25 +5,29 @@ class SearchBar extends Component {
     term: '',
   };
 
+  onFormSearch = (e) => {
+    this.props.onFormSearch(this.state.term);
+  };
+
   onFormSubmit = (e) => {
     e.preventDefault();
-    this.props.onSubmit(this.state.term);
+  };
+
+  onInputChange = (e) => {
+    this.setState({ term: e.target.value });
   };
 
   render() {
     return (
-      <div className="ui segment">
-        <form onSubmit={this.onFormSubmit} className="ui form">
-          <div className="field">
-            <label>Covid Search</label>
-            <input
-              type="text"
-              value={this.state.term}
-              onChange={(e) => this.setState({ term: e.target.value })}
-            />
-          </div>
-        </form>
-      </div>
+      <form onChange={this.onFormSearch} onSubmit={this.onFormSubmit}>
+        <label>Covid Search</label>
+        <input
+          type="text"
+          placeholder="Search Province"
+          value={this.state.term}
+          onChange={this.onInputChange}
+        />
+      </form>
     );
   }
 }

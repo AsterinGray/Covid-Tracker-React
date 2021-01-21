@@ -14,7 +14,7 @@ const CardList = (props) => {
     return null;
   });
 
-  return <div>{CardList}</div>;
+  return <div className="card-list">{CardList}</div>;
 };
 
 export default CardList;

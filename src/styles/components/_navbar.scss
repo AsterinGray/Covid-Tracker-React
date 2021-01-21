@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem 10rem;
+  background-color: $primary-color;
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    .nav-brand {
+      font-size: 3rem;
+    }
+    .nav-item {
+      margin: 0 2rem;
+      color: $secondary-color;
+    }
+    .nav-item:hover {
+      color: $secondary-color-dark;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  .nav-btn {
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: $secondary-color;
+    i {
+      margin: 0.5rem;
+    }
+  }
+  .nav-btn:hover,
+  .nav-btn:focus {
+    transform: none;
+    // background-color: $accent-color-dark;
+  }
+}

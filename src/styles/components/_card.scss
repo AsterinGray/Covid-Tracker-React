@@ -1,0 +1,20 @@
+.card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  text-align: center;
+  width: 18rem;
+  height: 12rem;
+  margin: 1rem;
+  padding: 1rem;
+  .card-header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+.card-list {
+  @include flex-cc();
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

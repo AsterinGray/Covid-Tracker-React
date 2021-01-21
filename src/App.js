@@ -1,7 +1,8 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import HomePage from './Pages/HomePage';
-import ProvincePage from './Pages/ProvincePage';
+
+import HomePage from './pages/HomePage';
+import ProvincePage from './pages/ProvincePage';
 
 const App = () => {
   return (

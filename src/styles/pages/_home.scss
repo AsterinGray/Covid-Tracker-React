@@ -1,0 +1,11 @@
+.home {
+  @include flex-cc();
+  flex-direction: column;
+  transition: all ease 1s;
+
+  .home-cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

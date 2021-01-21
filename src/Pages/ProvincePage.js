@@ -7,23 +7,31 @@ import SearchBar from '../components/SearchBar';
 import CardList from '../components/CardList';
 
 class ProvincePage extends Component {
-  state = { statistic: [], keyword: null };
+  state = { statistic: [], keyword: '' };
 
-  onSearchSubmit = async (term) => {
+  componentDidMount() {
+    this.loadData('');
+  }
+
+  loadData = async (term) => {
     const response = await axios.get(
       'https://indonesia-covid-19.mathdro.id/api/provinsi'
     );
-    this.setState({ statistic: response.data.data });
-    this.setState({ keyword: term.toLowerCase() });
+    this.setState({
+      statistic: response.data.data,
+      keyword: term.toLowerCase(),
+    });
   };
 
   render() {
     return (
-      <div>
+      <section>
         <Navbar />
-        <SearchBar onSubmit={this.onSearchSubmit} />
-        <CardList data={this.state} />
-      </div>
+        <div className="container">
+          <SearchBar onFormSearch={this.loadData} />
+          <CardList data={this.state} />
+        </div>
+      </section>
     );
   }
 }
